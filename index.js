@@ -1,4 +1,4 @@
-var io = require('socket.io').listen(5001);
+var io = require('socket.io').listen(process.env.APP_PORT);
 var redis = require('redis').createClient(process.env.REDIS_PORT, process.env.REDIS_HOST);
 
 redis.subscribe('rt-change');
